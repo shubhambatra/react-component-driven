@@ -1,0 +1,13 @@
+.mainBody {
+    /*  */
+    padding: 0px 75px 0px 80px;
+    /* display: flex; */
+    justify-content: center;
+}
+.imageLayer {
+    width: 100%;
+    height: 600px;
+    /* top: 0; */
+    left: 0;
+    position: absolute;
+}

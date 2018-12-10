@@ -1,30 +1,33 @@
 import * as React from 'react';
-import { TodoTextInput } from '../TodoTextInput';
-import { TodoActions } from 'app/actions/todos';
+import * as style from './style.css';
+import { HeaderLabel } from '../HeaderLabel';
 
 export namespace Header {
   export interface Props {
-    addTodo: typeof TodoActions.addTodo;
+    headerMenu: Array<object>;
   }
 }
 
 export class Header extends React.Component<Header.Props> {
   constructor(props: Header.Props, context?: any) {
     super(props, context);
-    this.handleSave = this.handleSave.bind(this);
-  }
-
-  handleSave(text: string) {
-    if (text.length) {
-      this.props.addTodo({ text });
-    }
+    // this.handleSave = this.handleSave.bind(this);
   }
 
   render() {
     return (
-      <header>
-        <h1>Todos</h1>
-        <TodoTextInput newTodo onSave={this.handleSave} placeholder="What needs to be done?" />
+      <header className={style.header}>
+        {/* <HeaderLabel key={0} label="Call +001 555 801" styleClassName={"headerLabel"}></HeaderLabel> */}
+        <label className={style.headerLabel}>Call +001 555 801</label>
+        <div className="">
+          {(() => {
+            return this.props.headerMenu.map((obj:any) => {
+              return(
+                <HeaderLabel key={obj.text} label={obj.text} styleClassName={"headerLabel"}></HeaderLabel>
+              )
+            })
+          })()}
+        </div>
       </header>
     );
   }

@@ -1,0 +1,29 @@
+.mainBodyHeader {
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+.leftHeader {
+    display: flex;
+    width: 30%;
+}
+.iconHeader {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+.iconHeader {
+    display: flex;
+    align-items: center;
+}
+.bodyNameHeader {
+    /* Shopia */
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 40px;
+    font-family: cursive;
+    font-weight: 600;
+}

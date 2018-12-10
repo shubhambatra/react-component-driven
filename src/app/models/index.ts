@@ -1,1 +1,2 @@
-export * from './TodoModel';
+export { TodoModel } from './TodoModel';
+export { LabelModel  } from './LabelModel';
