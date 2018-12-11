@@ -41,30 +41,15 @@ export class App extends React.Component<App.Props> {
 
   render() {
     
-    let headerTextArr:Array<object> = [{
-      id: 1,
-      text: "welcome Msg",
-      action: ""
-    },
-    {
-      id: 2,
-      text: "my account",
-      action: "",
-    },
-    {
-      id: 3,
-      text: "my wishlist",
-      action: "",
-    },
-    {
-      id: 4,
-      text: "login",
-      action: "",
-    }]
+    const { topHeaderMenu, mainHeaderMenu, iconArray, options } = this.props.todos[0];
+
     return (
       <div className={style.normal}>
-        <Header headerMenu={headerTextArr}/>
-        <MainBody />
+        <Header headerMenu={topHeaderMenu}/>
+        <MainBody 
+          headerMenu={mainHeaderMenu} 
+          icons={iconArray}
+          options={options} />
       </div>
     );
   }

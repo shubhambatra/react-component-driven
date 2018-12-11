@@ -7,7 +7,43 @@ const initialState: RootState.TodoState = [
   {
     id: 1,
     text: 'Use Redux',
-    completed: false
+    completed: false,
+    iconArray: ["fa fa-facebook", "fa fa-twitter", "fa fa-pinterest-p", "fa fa-camera-retro"],
+    options: ["Rupah", "Doller", "Euro"],
+    topHeaderMenu: [{
+        id: 1,
+        text: "welcome Msg",
+        action: ""
+      },
+      {
+        id: 2,
+        text: "my account",
+        action: "",
+      },
+      {
+        id: 3,
+        text: "my wishlist",
+        action: "",
+      },
+      {
+        id: 4,
+        text: "login",
+        action: "",
+      }],
+    mainHeaderMenu: [{
+      text: "Home",
+      action: ""
+    },{
+      text: "Gallery",
+      action: "",
+    },{
+      text: "Categories",
+      action: "",
+    },{
+      text: "Pages 2",
+      action: "",
+    }],
+
   }
 ];
 

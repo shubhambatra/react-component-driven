@@ -3,7 +3,11 @@
 export interface TodoModel {
   id: number;
   text: string;
-  completed: boolean;
+  completed?: boolean;
+  topHeaderMenu?: any;
+  mainHeaderMenu?: any;
+  iconArray?:any;
+  options?: any;
 }
 
 export namespace TodoModel {
